@@ -305,8 +305,11 @@ impl App {
             ));
         }
 
-        let should_launch =
-            (hits.is_empty() || always_launch_if_no_window) && launch.is_some();
+        // With `always_launch_if_no_window`, launch only as a fallback when the
+        // matched window could not be raised. Launching unconditionally makes
+        // emacsclient visit its file argument and replace the current buffer.
+        let should_launch = (hits.is_empty() || (always_launch_if_no_window && !activated))
+            && launch.is_some();
         if should_launch {
             if let Some(cmd) = &launch {
                 if !activated {
