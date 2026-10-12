@@ -141,16 +141,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "06bdbd8cfc056b8d2e2e85f29b56a3bdbecb527cef81eb39e3e7b98af4652770"
 
 [[package]]
-name = "window-jack-in"
-version = "0.2.0"
-dependencies = [
- "basic-toml",
- "serde",
- "windows-sys",
- "winresource",
-]
-
-[[package]]
 name = "unicode-ident"
 version = "1.0.24"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -161,6 +151,16 @@ name = "version_check"
 version = "0.9.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "0b928f33d975fc6ad9f86c8f283853ad26bdd5b10b7f1542aa2fa15e2289105a"
+
+[[package]]
+name = "window-jack-in"
+version = "0.2.0"
+dependencies = [
+ "basic-toml",
+ "serde",
+ "windows-sys",
+ "winresource",
+]
 
 [[package]]
 name = "windows-sys"
